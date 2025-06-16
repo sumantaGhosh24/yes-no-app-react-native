@@ -6,8 +6,8 @@ import authAdmin from "../middleware/authAdmin";
 
 const router = express.Router();
 
-// router.get("/admin/dashboard", authAdmin, dashboardCtrl.getAdminDashboard);
+router.get("/admin/dashboard", authAdmin, dashboardCtrl.getAdminDashboard);
 
-// router.get("/dashboard", auth, dashboardCtrl.getDashboard);
+router.get("/dashboard", auth, dashboardCtrl.getDashboard);
 
 export default router;
