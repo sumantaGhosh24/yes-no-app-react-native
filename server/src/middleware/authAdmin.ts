@@ -19,7 +19,6 @@ const authAdmin = (req: IReqAuth, res: Response, next: NextFunction) => {
       process.env.ACCESS_TOKEN_SECRET!,
       async (err: any, decoded: any) => {
         if (err) {
-          res.clearCookie("jwt", {httpOnly: true});
           res.status(403).json({message: "Forbidden"});
           return;
         }
